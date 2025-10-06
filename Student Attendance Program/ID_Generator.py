@@ -10,5 +10,5 @@ def save_student_id(student_id):
 if __name__ == "__main__":
     student_id = generate_studentid()
     print(f"Generated Student ID: {student_id}")
-    save_studentid(student_id)
+    save_student_id(student_id)
     print("Student ID saved successfully")
