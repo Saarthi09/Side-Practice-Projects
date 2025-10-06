@@ -3,7 +3,7 @@ import random
 def generate_studentid():
     return random.randint(100000,999999)
 
-def save_student_id():
+def save_student_id(student_id):
     with open("student_ids.txt", "a") as file:
         file.write(str(student_id)+ "\n")
 
