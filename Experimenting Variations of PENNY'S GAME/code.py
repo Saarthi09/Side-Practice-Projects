@@ -1,13 +1,19 @@
 import random
 outcomes = list()
-outcomes.append('heads')
-outcomes.append('tails')
+outcomes.append('H')
+outcomes.append('T')
 count = 0
-#a = int(input("enter a 3 toss sequence (eg: HTT)"))
+a = input("enter a 3 toss sequence (eg: HTT)").upper()
 series = list()
-b = int(input("how many tosses: "))
-for i in series:
-    count =+ 1
-    y = random.choice(outcomes, k = 1)
-    series.append(y)
-print(series)
+
+while True:
+    toss = random.choice(outcomes)
+    series.append(toss)
+    count += 1
+
+    if len(series) >= 3:
+        last_three = ''.join(series[-3:])
+        if last_three == a:
+            break
+
+print(f"Sequence {series} appeared after {count} tosses")
